@@ -1,0 +1,25 @@
+What are the two types of Intents?
+-Explicit intents
+-Implicit intents
+
+Which of the two types of Intents are more secure?
+Explicit intents is more secure
+
+What type of Intent is shown on lines 69 to 73 of SecondFragment.kt?
+Implicit intents because no component is specified, instead, an action is performed  a webpage is going to be opened
+Also it can be Explicit intent by add  val intent = Intent(activity, ProductScrollingActivity::class.java) 
+and remove  intent.type = "text/giftcards_browse"
+            intent.data = Uri.parse("https://appsecclass.report/api/index")
+
+What type of Intent is shown on lines 68 to 70 of ThirdFragment.kt?
+Explicit intents because in  explicit intent, you can pass data to other activities by using the putExtra method
+
+Which of these two Intents is the proper way to do an Intent?
+Explicit intents in ThirdFragment.kt
+
+The error was in SecondFragment.kt 
+
+What I fixed I by delete -> intent.type = "text/giftcards_browse"
+                        -> intent.data = Uri.parse("https://appsecclass.report/api/index")
+and fixed this  var intent = Intent(Intent.ACTION_VIEW) to this -> val intent = Intent(activity, ProductScrollingActivity::class.java)
+it can make the user buy giftcard fast instead to bring the user to the giftcard page 
