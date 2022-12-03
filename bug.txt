@@ -1,0 +1,7 @@
+The vulnerability is with the authentication for card number.
+Here is the issue useCard.kt  calls CardInterface.kt to use the card number and token 
+fun useCard(@Path("card_number") card_number: Int?, @Header("Authorization") authHeader: String): Call<Card?>
+but without checking if the token matches the current user token.It just take the card number as input .
+So that mean the user can use someone else giftcard.
+We can fix it by checking the user id if is that the same his user id or it is for the different user if it is not matche we can make it invalid.
+so we can avoid using another user's giftcard.
